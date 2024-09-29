@@ -1,0 +1,11 @@
+{
+  "name": "@react-native-oh-tpl/react-native-custom-keyboard",
+  "version": "1.0.3-0.0.1",
+  "description": "",
+  "main": "Index.ets",
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@rnoh/react-native-openharmony": "file:../react_native_openharmony"
+  }
+}

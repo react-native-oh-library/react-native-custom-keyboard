@@ -1,22 +1,40 @@
-
 {
-  "name": "react-native-custom-keyboard",
-  "version": "1.0.3",
+  "name": "@react-native-oh-tpl/react-native-custom-keyboard",
+  "version": "1.0.3-0.0.1",
   "description": "",
+  "nativePackage": true,
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/reactnativecn/react-native-custom-keyboard.git"
+    "type": "git"
   },
   "keywords": [
-    "react-native"
+    "react-native",
+    "ios",
+    "android",
+    "harmony",
+    "react-component"
   ],
   "author": "",
   "license": "",
   "peerDependencies": {
-    "react-native": "^0.29.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.2"
+  },
+  "harmony": {
+    "alias": "react-native-custom-keyboard",
+    "codegenConfig": [
+      {
+        "version": 2,
+        "specPaths": [
+          "./src/specs/v2"
+        ]
+      }
+    ]
+
   }
 }
