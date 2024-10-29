@@ -5,7 +5,7 @@ using namespace rnoh;
 using namespace facebook;
 
 static constexpr double HEIGHT = 216;
-static constexpr int AVOIDENCE = 1;
+static constexpr int AVOIDENCE = 0;
 static constexpr int START_SURFACE_ID=45;
 static constexpr int CLICK_TARGET_ID=NODE_ON_CLICK+101;
 NativeCustomKeyboardTurboModuleSpecJSI::~NativeCustomKeyboardTurboModuleSpecJSI() {
@@ -105,7 +105,7 @@ void NativeCustomKeyboardTurboModuleSpecJSI::install(jsi::Runtime &rt, int32_t t
         folly::dynamic initialProps = folly::dynamic::object("tag", tag)("type", type);
         double width, height, scale;
         getDevicePhycicalPixels(instanceCapi, width, height, scale);
-        instanceCapi->startSurface(surfaceID, width / scale, HEIGHT, 0.0f, 0.0f, scale, false,
+        instanceCapi->startSurface(surfaceID, 0.0f, 0.0f, width / scale, HEIGHT, 0.0f, 0.0f, scale, false,
                                    std::move(initialProps));
         auto comp = instanceCapi->findComponentInstanceByTag(surfaceID);
         if (!comp) {
